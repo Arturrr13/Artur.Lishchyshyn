@@ -1,0 +1,158 @@
+* {
+    font-family: 'Open Sans';
+}
+
+p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.nav{
+    text-align: center;
+    border-bottom: 1px solid #828282;;
+}
+
+.list-item{
+    display: inline;
+    margin-left: 40px;
+}
+
+.list{
+    list-style: none;
+}
+
+.link{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #828282;
+}
+
+.link--active{
+    text-decoration: underline;
+    color: black;
+}
+
+.link:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.header{
+    padding: 0 250px;
+}
+
+.name{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 47.3392px;
+    line-height: 64px;
+    margin: 35px 0 35px 0;
+}
+
+.about{
+    text-align: center;
+    background: #F6F6F6;
+    height: 520px;
+    margin-top: 100px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.title{
+    padding-top: 100px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 46px;
+    text-align: center;
+}
+
+.contents_skills{
+    text-align: center;
+}
+
+.elements{
+    padding: 41px 85px;
+    display: inline-block;
+}
+
+.subtitle{
+    font-family: Gilroy-Bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
+}
+
+.stars{
+    margin-top: 59px;
+}
+
+.star{
+    margin-left: 9px;
+}
+
+.portfolio{
+    background: #F6F6F6;
+    text-align: center;
+    height: 2239px;
+}
+
+.fotoup{
+    margin: 60px 0 128px 0;
+}
+
+.subtext{
+    text-decoration: underline;
+    margin-top: 9px;
+}
+
+.fotodown{
+   margin-top: 136px;
+}
+
+.button{
+    height: 42px;
+    background: #070707;
+    width: 180px;
+    margin: auto;
+    border-radius: 38px;
+}
+
+.inbutton{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding: 8px 0;
+}
+
+.message{
+    text-align: center;
+    margin-top: 31px;
+}
+
+.ic{
+    padding: 0 30px;
+}
+
+.footer{
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #828282;
+    padding: 44px 0;
+}
+
+
