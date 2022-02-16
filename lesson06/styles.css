@@ -1,3 +1,9 @@
+@font-face{
+    font-family: Roboto;
+    src: url(./Roboto-Black.ttf) format("truetype"),
+    url(./Roboto-Regular.ttf) format("truetype"),
+    url(./Roboto-Bold.ttf) format("truetype");
+}
 
 .header{
     display: flex;
@@ -9,8 +15,8 @@
 }
 
 .eng{    
-    font-family: Roboto;
-    font-weight: 500;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 600;
     font-size: 20px;
     color: #ffffff;
     -webkit-text-stroke: 1px black;
@@ -18,8 +24,7 @@
 }
 
 .header__text{
-    font-family: Roboto;
-    font-weight: 500;
+    font-family: 'Roboto-Regular',sans-serif;
     font-size: 20px;
     color: #000000;
 }
@@ -30,7 +35,6 @@ svg{
 
 .text__container{
     padding: 90px 24px 250px 44px;
-    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
@@ -42,6 +46,7 @@ svg{
 
 .title{
     font-weight: 900;
+    font-family: Roboto, sans-serif;
 }
 
 .title::first-letter{
@@ -50,8 +55,10 @@ svg{
 }
 
 .text{
-    font-size: 24px;
-    font-weight:100;
+    font-family: PT Sans;
+    font-size: 36px;
+    font-weight:500;
+    text-transform: none;
 }
 
 .selected__text::after{
@@ -65,9 +72,11 @@ svg{
 }
 
 .bold__text{
-    font-weight: 900;
+    font-weight: 700;
+    font-family: PT Sans,sans-serif;
 }
 
 .underlined__text{
     text-decoration: underline;
+    font-family: PT Sans,sans-serif;
 }
