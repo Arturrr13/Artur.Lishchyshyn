@@ -1,0 +1,71 @@
+@font-face{
+    font-family: Roboto;
+    src: url(./Roboto-Black.ttf) format("truetype"),
+    url(./Roboto-Regular.ttf) format("truetype"),
+    url(./Roboto-Bold.ttf) format("truetype");
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 140px;
+}
+
+.left__block{
+    padding: 32px 0 0 44px;
+}
+
+.eng{    
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    -webkit-text-stroke: 1px black;
+    margin-right: 44px;
+}
+
+.header__text{
+    font-family: 'Roboto-Regular',sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+svg{
+    padding: 14px 35px 0 0;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 2px solid #BFBFBF;
+    border-bottom: 2px solid #BFBFBF;
+    margin-bottom: 48px;
+}
+
+.cards{
+    margin: 15px 0 15px 0;
+    width: 440px;
+    height: 280px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.cards:hover{
+    transform: rotateY(180deg);
+}
+
+.card-before, .card-back{
+    position: absolute;
+    top:0%;
+    backface-visibility: hidden;
+}
+
+.card-back{
+    transform: rotateY(180deg);
+}
+
+.instagram{
+    width: 440px;
+    height: 280px;
+}
