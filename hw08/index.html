@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./plugins/jquery.formstyler.css">
+        <link rel="stylesheet" href="./plugins/jquery.formstyler.theme.css">
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>lesson08</title>
+</head>
+<body>
+    <main>
+        <div class="form__account">
+                <form method="post" action="#">
+                    <div class="flex">
+                    <header>
+                        <span>
+                        Create an Account
+                        </span>
+                    </header>
+
+                    <div class="flexbox">
+                        <div class="textbox">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="first_name">
+                        </div>
+
+                        <div class="textbox">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="last_name">
+                        </div>
+                    </div>
+
+                    <div class="flexbox">
+                        <div class="textbox email--size">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email">
+                            <label class="email--text" for="name" class="info">We'll never share your email with anyone else.</label>
+                        </div>
+                    </div>
+
+                    <div class="radiobox">
+                        <div class="radio--margin">
+                            <input type="radio" name="gender" value="male" id="male" checked>
+                            <label for="male">Male</label>
+                        </div>
+                        <input type="radio" name="gender" value="famale" id="famale">
+                        <label for="famale">Famale</label>
+                    </div>
+                    
+                    <div class="flexbox">
+                        <div class="textbox">
+                            <label for="Country">Country</label>
+                                <select id="Country" name="Country" data-placeholder="Country">
+                                    <option></option>
+                                    <option>Australia</option>
+                                    <option>Austria</option>
+                                    <option>Belgium</option>
+                                    <option>Denmark</option>
+                                    <option>China</option>
+                                    <option>England</option>
+                                    <option>France</option>
+                                    <option>Greece</option>
+                                    <option>Northern Ireland</option>
+                                    <option>Japan</option>
+                                    <option>Italy</option>
+                                    <option>Portugal</option>
+                                    <option>Switzerland</option>
+                                    <option>The United Kingdom</option>
+                                    <option>The USA</option>
+                                    <option>Ukraine</option>
+                                    <option>Wales</option>
+                                    <option>Poland</option>
+                                </select>
+                        </div>
+                
+                        <div class="textbox">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                    </div>
+
+                    <button name="button">
+                        Sign Up
+                    </button>
+
+                    <div class="text">
+                        <span class="info">
+                            By clicking the 'Sign Up' button, you confirm that you accept our
+                        </span>
+                        <span class="terms_and_privacy">Terms of Use
+                            <span class="info">and</span>
+                        Privacy Policy</span>
+                    </div>
+
+                    <div class="border"></div>
+
+                    <div class="text--botton">
+                        <span>Have an account?<span class="log_in">Log In</span></span>
+                    </div>
+                    </div>
+                </form>   
+        </div>
+
+        <div class="form__profile">
+            <form method="post" action="#" enctype="multipart/form-data">
+                <div class="flex">
+                    <header>
+                        <span class="profile">
+                        Profile
+                        </span>
+                    </header>
+
+                    <div class="flexbox--file">
+                        <div class="photo">
+                        </div>
+                        <div class="filebox">
+                            <input type="file" name="avatar" accept=".jpg, .jpeg, .png">
+                            <label for="avatar" class="photo--size">Up to 1 MB (300x300 px)</label>
+                        </div>
+                        <button class="trash"><img src="./image/Trash.png"></button>
+                    </div>
+
+                    <div class="flexbox">
+                        <div class="textbox">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+
+                        <div class="textbox email">
+                            <label for="e-mail">E-mail</label>
+                            <input type="email" id="e-mail" name="e-mail">
+                        </div>
+                    </div>
+
+                    <div class="flexbox">
+                        <div class="textbox">
+                            <label for="Country">Country</label>
+                                <select id="Country" name="Country" data-placeholder="Country">
+                                    <option></option>
+                                    <option>Australia</option>
+                                    <option>Austria</option>
+                                    <option>Belgium</option>
+                                    <option>Denmark</option>
+                                    <option>China</option>
+                                    <option>England</option>
+                                    <option>France</option>
+                                    <option>Greece</option>
+                                    <option>Northern Ireland</option>
+                                    <option>Japan</option>
+                                    <option>Italy</option>
+                                    <option>Portugal</option>
+                                    <option>Switzerland</option>
+                                    <option>The United Kingdom</option>
+                                    <option>The USA</option>
+                                    <option>Ukraine</option>
+                                    <option>Wales</option>
+                                    <option>Poland</option>
+                                </select>
+                        </div>
+                
+                        <div class="textbox">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                    </div>
+
+                    <div class="flexbox">
+                        <div class="textbox">
+                            <label for="code">Zip Code</label>
+                            <input type="number" id="code" name="code">
+                        </div>
+
+                        <div class="textbox">
+                            <label for="phone">Phone Number</label>
+                            <input type="number" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <button name="button" class="update">
+                        Update
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./plugins/jquery.formstyler.min.js"></script>
+    <script>
+        (function($) {
+            $(function() {
+            
+            	$('input[type="radio"],input[type="file"], select').styler({
+                    selectSearch: true,
+                });
+            
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>
