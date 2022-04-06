@@ -1,0 +1,227 @@
+$main-color:#FFCC00;
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  html, body{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+}
+
+
+.main--flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .head{
+        display: flex;
+        flex-direction: column;
+        .head--text{
+            font-family: 'Raleway';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            text-transform: uppercase;    
+            color: #898F8F;
+            margin-top: 110px;
+        }
+        .head--text__big{
+            font-family: 'Roboto';
+            font-weight: 900;
+            font-size: 60px;
+            line-height: 66px;  
+            text-align: center;
+            text-transform: uppercase;
+            color: $main-color;
+            margin-top: 15px;
+        }    
+    }
+
+    .border--box__horizontal{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .fire{
+            margin: 40px 5px;
+        }
+        .border__horizontal{
+            width: 210px;
+            height: 1px;
+            border-top: 1px solid $main-color;
+        }
+    }
+
+    .content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .arrow--left, .arrow--right{
+            margin: 0 41px;
+        }
+        svg:hover{
+            cursor: pointer;
+            path{
+                fill:#898F8F;
+            }
+        }
+
+        .photo--box{
+            width: 430px;
+            height: 430px;
+        }
+        .top--square{
+            display: flex;
+            justify-content: space-between;
+            .square--top__left{
+                width: 100px;
+                height: 100px;
+                border-top: 1px solid $main-color;
+                border-left: 1px solid $main-color;
+            }
+            .square--top__right{
+                width: 100px;
+                height: 100px;
+                border-top: 1px solid $main-color;
+                border-right: 1px solid $main-color;
+            }
+        }
+        .photo{
+            margin-top: -85px;
+            margin-left: 15px;
+        }
+        .bottom--square{
+            margin-top: -90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .square--bottom__left{
+                width: 100px;
+                height: 100px;
+                border-bottom: 1px solid $main-color;
+                border-left: 1px solid $main-color;
+            }
+            .square--bottom__right{
+                width: 100px;
+                height: 100px;
+                border-bottom: 1px solid $main-color;
+                border-right: 1px solid $main-color;
+            }
+        }
+
+        .border--vertical{
+            width: 1px;
+            height: 560px;
+            border-left: 1px solid $main-color;
+            margin-left: 85px;
+        }
+
+        .info{
+            width: 430px;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 85px;
+            .name{
+                font-family: 'Roboto';
+                font-weight: 900;
+                font-size: 36px;
+                line-height: 42px;
+                text-transform: capitalize;        
+                color: #666666;
+            }
+            .border{
+                width: 100px;
+                height: 1px;
+                background: $main-color;
+                margin-top: 30px;
+            }
+            .profession{
+                font-family: 'Raleway';
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 36px;
+                text-transform: capitalize;         
+                color: #666666;
+                margin-top: 30px;
+            }
+            .social{
+                margin-top: 30px;
+                img{
+                    margin-left: 2px;
+                }
+
+                img:hover{
+                    cursor: pointer;
+                    transition: all .6s ease;
+                    transform: rotateY(360deg);
+                }
+            }
+            .info--text{
+                font-family: 'Raleway';
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: #333333;
+                margin-top: 49px;
+            }
+            .border--section{
+                display: flex;
+                flex-direction: row;
+                margin-top: 30px;
+                .border--start-end{
+                    width: 10px;
+                    height: 4px;
+                    background: $main-color;
+                    margin: 0 5px;
+                }
+                .border--center{
+                    width: 20px;
+                    height: 4px;
+                    background: $main-color;
+                }
+            }
+            button{
+                width: 118px;
+                padding: 5px 0;
+                border: 1px solid $main-color;
+                background: white;
+                font-family: 'Open Sans';
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 14px;
+                text-transform: uppercase;        
+                color: #666666;
+                margin-top: 25px;
+            }
+            button:hover{
+                cursor: pointer;
+                border: 1px solid #898F8F;
+                color: $main-color;
+            }
+        }
+    }
+    .circle{
+        display: flex;
+        flex-direction: row;
+        margin: 40px 0;
+        .circle__full{
+            width: 10px;
+            height: 10px;
+            background: $main-color;
+            border-radius: 50%;
+        }
+        .circle__empty{
+            width: 10px;
+            height: 10px;
+            border: 1px solid $main-color;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+    }
+}
