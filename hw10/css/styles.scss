@@ -1,0 +1,210 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  html, body{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin font_style($color, $size, $font, $height, $wight, $spacing, $mrtop) {
+    font-family: $font;
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+    font-weight: $wight;
+    word-spacing: $spacing;
+    margin-top: $mrtop;
+}
+
+main{
+    max-width: 1155px;
+    margin: 0 auto;
+}
+
+header{
+    height: 80px;
+    border-bottom: 1px solid #EFEEF3;
+    max-width: 1155px;
+    margin: 0 auto;
+    margin-top: 38px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    .text{
+        display: flex;
+        flex-direction: column;
+        .text__lil{
+            @include font_style(#7690A8, 16px, 'Roboto', 21px, 400, normal, 0)
+        }
+        .text__big{
+            @include font_style(#16133D, 40px, 'Nunito Sans', 52px, 600, 0.2, 17px)
+        }
+    }
+    .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 35px;
+        .part--1:hover, .part--2:hover, .part--3:hover{
+            border: 1px solid #3DB370;
+        }
+        .part--1{
+            width: 360px;
+            height: 347px;
+            background: #FFFFFF;
+            border: 1px solid #E5EAF4;
+            box-sizing: border-box;
+            border-radius: 8px;
+            .part--content{
+                width: 274px;
+                display: flex;
+                flex-direction: column;
+                margin: 41px 45px 46px 41px;
+                .icon{
+                    width: 64px;
+                    height: 64px;
+                    border: 1px solid rgba(21, 101, 216, 0.1);
+                    box-sizing: border-box;
+                    border-radius: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .icon:hover{
+                    path:nth-child(8){
+                        fill: #3DB370;
+                    }
+                }
+                .name{
+                    @include font_style(#16133D, 24px, 'Roboto', 21px, 400, 0.2, 28px)
+                }
+                .info{
+                    @include font_style(#16133D, 16px, 'Roboto', 28px, 400, normal, 14px)
+                }
+                .subtext{
+                    @include font_style(#16133D, 24px, 'Roboto', 19px, 400, normal, 29px)
+                }
+            }
+        }
+        .part--2{
+            width: 360px;
+            height: 347px;
+            background: #FFFFFF;
+            border: 1px solid #E5EAF4;
+            box-sizing: border-box;
+            border-radius: 8px;
+            .part--content{
+                width: 274px;
+                display: flex;
+                flex-direction: column;
+                margin: 41px 45px 46px 41px;
+                .icon{
+                    width: 64px;
+                    height: 64px;
+                    border: 1px solid rgba(21, 101, 216, 0.1);
+                    box-sizing: border-box;
+                    border-radius: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .icon:hover{
+                    path:nth-child(7){
+                        fill: #3DB370;
+                    }
+                }
+                .name{
+                    @include font_style(#16133D, 24px, 'Roboto', 21px, 400, 0.2, 28px)
+                }
+                .info{
+                    @include font_style(#16133D, 16px, 'Roboto', 28px, 400, normal, 14px)
+                }
+                .subtext{
+                    @include font_style(#16133D, 24px, 'Roboto', 19px, 400, normal, 29px)
+                }
+            }
+        }
+        .part--3{
+            width: 360px;
+            height: 347px;
+            background: #FFFFFF;
+            border: 1px solid #E5EAF4;
+            box-sizing: border-box;
+            border-radius: 8px;
+            .part--content{
+                width: 274px;
+                display: flex;
+                flex-direction: column;
+                margin: 41px 45px 46px 41px;
+                .icon{
+                    width: 64px;
+                    height: 64px;
+                    border: 1px solid rgba(21, 101, 216, 0.1);
+                    box-sizing: border-box;
+                    border-radius: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .icon:hover{
+                    path:nth-child(7){
+                        fill: #3DB370;
+                    }
+                }
+                .name{
+                    @include font_style(#16133D, 24px, 'Roboto', 21px, 400, 0.2, 28px)
+                }
+                .info{
+                    @include font_style(#16133D, 16px, 'Roboto', 28px, 400, normal, 14px)
+                }
+                .subtext{
+                    @include font_style(#16133D, 24px, 'Roboto', 19px, 400, normal, 29px)
+                }
+            }
+        }   
+    }
+}
+
+footer{
+    height: 194px;
+    background: #16133D;
+    width: 100%;
+    margin-top: 69px;
+    .footer{
+        width: 1155px;
+        margin: 0 auto;
+    }
+        img{
+            margin-top: 36px;
+        }
+        .social{
+            display: flex;
+            flex-direction: row;
+            margin-top: 40px;
+            .icon--social{
+                width: 38px;
+                height: 38px;
+                background: #EFEEF3;
+                border-radius: 5px;
+                margin-right: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .icon--social:hover{
+                path{
+                    fill: #3DB370;
+                }
+            }
+        }
+}
+
+
+
+
