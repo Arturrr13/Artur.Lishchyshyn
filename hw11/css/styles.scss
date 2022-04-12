@@ -1,0 +1,316 @@
+@import 'hamburger';
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+section{
+  max-width: 936px;
+  margin: 0 auto;
+}
+
+@mixin fonts_styles($weight, $size, $color, $height) {
+  font-family: 'Gilroy';
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  line-height: $height;
+}
+
+.navigation{
+  max-width: 936px;
+  margin: 0 auto;
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #828282;
+  li{
+    list-style: none;
+  }
+    a{
+      text-decoration: none;
+      @include fonts_styles(700, 18px, #828282, 22px)
+    }
+    a:hover{
+      color: black;
+    }
+}
+
+.Denis_Novik{
+  width: 100%;
+  .Denis_Novik--text{
+    height: 118px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    span:nth-child(3){
+      transform: rotate(-90deg);
+      margin-bottom: 21px;
+      margin-right: -20px;
+      @include fonts_styles(700, 16px, black, 20px)
+    }
+    span:nth-child(2){
+      width: 159px;
+      @include fonts_styles(500, 18px, black, 22px)
+    }
+    span:nth-child(1){
+      width:123.51px;
+      @include fonts_styles(700, 47px, black, 59px)
+    }
+  }
+  img{
+    margin-top: 30px;
+  }
+}
+
+.About_me{
+  height: 506px;
+  max-width: 100%;
+  width: 100%;
+  background: #F6F6F6;
+  margin-top: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  span{
+    @include fonts_styles(700, 34px, black, 43px)
+  }
+  .textbox{
+    width: 485.34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 43px;
+    margin-top: 17px;
+    @include fonts_styles(500, 18px, black, 22px)
+  }
+}
+
+.Skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 110px;
+  span:nth-child(1){
+    margin-top: 91px;
+    @include fonts_styles(700, 34px, black, 43px)
+  }
+  span:nth-child(2){
+    margin-top: 70px;
+    @include fonts_styles(500, 18px, black, 22px)
+  }
+  .skills-elements{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 90px;
+    .element{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 80px;
+      span{
+        width: 77px;
+        height: 28px;
+        margin-top: 25px;
+        text-align: center;
+        @include fonts_styles(700, 14px, #828282, 17px)
+      }
+      .stars{
+        margin-top: 40px;
+        width: 166.46px;
+        display: flex;
+        justify-content: space-between;
+        img{
+          width: 26.07px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}
+
+.Portfolio{
+  max-width: 100%;
+  background: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  span{
+    text-decoration-line: underline;
+    margin-top: 44px;
+    text-align: center;
+    margin-bottom: 100px;
+    @include fonts_styles(500, 18px, black, 22px)
+  }
+  span:nth-child(1){
+    text-decoration-line: none;
+    margin-top: 112px;
+    margin-bottom: 47px;
+    @include fonts_styles(700, 34px, black, 43px)
+  }
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  span:nth-child(2){
+    margin-top: 20px;
+    width:275px;
+    @include fonts_styles(500, 18px, black, 22px)
+  }
+  span:nth-child(1){
+    margin-top: 114px;
+    @include fonts_styles(700, 34px, black, 43px)
+  }
+  span:nth-last-child(1){
+    width: 243px;
+    margin-top: 46px;
+    margin-bottom: 120px;
+    @include fonts_styles(500, 14px, #828282, 17px)
+  }
+  button{
+    width:180px;
+    height:42px;
+    margin-top: 30px;
+    background: black;
+    border-radius: 25px;
+    border: none;
+    @include fonts_styles(700, 18px, white, 22px)
+  }
+  button:hover{
+    border: 1px solid #4b4949;
+    cursor: pointer;
+  }
+  .social{
+    margin-top: 85px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+  }
+}
+
+.social--icon:hover{
+  svg{
+    path{
+      fill: #828282;
+    }
+  }
+}
+
+#side_menu{
+  position: fixed;
+  width: 375px;
+  height: 812px;
+  right: 0px;
+  top: 0px;
+  background: #ffffff;
+  z-index: 2000;
+  transform: translateX(375px);
+  transition: all .5s ease;
+  &.open{
+    transform: translateX(0);
+  }
+  .navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 26px;
+    gap: 34px;
+    border-bottom: none;
+    margin-top: -59px;
+    a{
+      font-size: 34px;
+      line-height: 42px;
+    }
+  }
+  .menu_language{
+    position: relative;
+    transform: rotate(90deg);
+    top: 222px;
+    left: 241px;
+    @include fonts_styles(700, 34px, black, 42px)
+  }
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  max-width: 936.24px;
+  object-fit: cover;
+}
+
+@media screen and (max-width:486px){
+  .textbox{
+    max-width: 316px;
+  }
+}
+
+.hamb_menu{
+  display: none;
+}
+
+.position--hamb{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 66px;
+}
+
+@media screen and (max-width:480px){
+  section{
+    max-width: calc(100% - 40px);
+  }
+
+  .textbox{
+    max-width: 316px;
+  }
+
+  .navigation{
+    display: none;
+  }
+
+  .hamb_menu{
+    display:block;
+  }
+
+  .for_phone{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 65px;
+    .Denis_Novik--text{
+      height: 173px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0;
+      span:nth-child(3){
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
