@@ -1,0 +1,239 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  html, body{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+}
+
+body{
+  max-width: 1110px;
+  margin: 0 auto;
+  header{
+    margin-top: 61px;
+  }
+}
+
+.menu{
+  display: grid;
+  grid-template-columns: 1fr 164px;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  gap: 29px;
+  a{
+    text-decoration: none;
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.346154px;
+    color: #111111;
+  }
+}
+
+.title{
+  max-width: 635px;
+  p{
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.423077px;
+    color: #4A4FF2;
+  }
+  p:last-child{
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #111111;
+    margin-top: 32px;
+  }
+  span{
+    color: #4A4FF2;
+  }
+}
+
+.quote{
+  font-family: 'Mulish';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #111111;
+  opacity: 0.6;
+}
+
+.info{
+  max-width: 1037px;
+  display: grid;
+  grid-template-columns: 1fr 214px;
+  margin-top: 96px;
+}
+
+.service--text{
+  margin: 91px 0 91px;
+  display: grid;
+  grid-template-columns: 635fr 440fr;
+  .service_list{
+    max-width: 350px;
+    margin-left: 94px;
+    list-style: none;
+    columns: 2;
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #111111;
+    opacity: 0.6;
+    li{
+      margin-top: 10px;
+    }
+    li:first-child{
+      margin-top: 0;
+    }
+  }
+  p{
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    color: #111111;
+  }
+}
+
+.container{
+  border-top: 2px solid #D8D8D8;
+}
+
+.container:last-child{
+  border-bottom: 2px solid #D8D8D8;
+}
+
+.awards_block{
+  display: grid;
+  grid-template-columns: 43% 57%;
+  margin: 48px 0 58px;
+  &--title{
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: #111111;
+  }
+}
+
+.right_block{
+  &--container{
+    display: grid;
+    grid-template-columns: 2fr 190px 1fr;
+    .container--title{
+      font-family: 'Mulish';
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;  
+      color: #111111;
+    }
+    .container--info{
+      .info--title{
+        font-family: 'Mulish';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #111111;
+      }
+      .info--text{
+        font-family: 'Mulish';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #111111;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        margin-top: 12px;
+      }
+    }
+    .container--year{
+      text-align: right;
+      font-family: 'Mulish';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #111111;
+    }
+  }
+  &--container:last-child{
+    margin-top: 80px;
+  }
+}
+
+footer{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 114px;
+  .footer_right-block{
+    display: grid;
+    grid-template-columns: 1fr 106px;
+    align-items: center;
+    .nav{
+      margin-right: 20px;
+    }
+    .social{
+      align-items: center;
+      svg{
+        margin-right: 24px;
+      }
+      svg:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:700px) {
+  .awards_block{
+    grid-template-columns: 1fr;
+  }
+  .right_block{
+    margin-top: 20px;
+  }
+  .service--text{
+    grid-template-columns: 1fr;
+    .service_list{
+      align-items: center;
+      margin-left: 0;
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+  .info{
+    grid-template-columns: 1fr;
+  }
+
+  body{
+    width: 95%;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .right_block--container{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    .container--year{
+      text-align: left;
+    }
+  }
+  footer{
+    grid-template-columns: 1fr;
+    .footer_right-block{
+      margin-top: 20px;
+    }
+  }
+}
