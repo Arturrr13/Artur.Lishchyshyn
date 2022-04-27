@@ -1,0 +1,701 @@
+$main_color: #5474FD;
+
+@import 'hamburger';
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  html, body{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container__Bhromaon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 26px;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 277px;
+  }
+  p{
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 6.82px;
+    color: #FFFFFF;
+    margin-top: 11px;
+    text-align: center;
+  }
+  .arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 12px;
+    height: 12px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .scroll_down{
+    margin-top: 107px;
+    text-align: center;
+    a{
+      text-decoration: none;
+    }
+  }
+  .scroll_down:hover{
+    .arrow{
+      border: solid $main_color;
+      border-width: 0 2px 2px 0;
+    }
+    p{
+      color: $main_color;
+    }
+  }
+  .search-box{
+    position: relative;
+    width: 653px;
+    height: 63px;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .input-search{
+    width: 653px;
+    height: 63px;
+    border-style:none;
+    outline: none;
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+    color: #999999;
+    padding: 0 168px 0 15px;
+  }
+  .btn-search{
+    position: absolute;
+    width: 153px;
+    height: 63px;
+    
+    top: 0px;
+    background: #5474FD;
+    border: 2px solid #FFFFFF;
+    font-family: 'Aleo';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      margin-left: 10px;
+    }
+  }
+  .input-search::-webkit-input-placeholder{
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2.8px;
+    color: #999999;
+  }
+  .input-search::-moz-placeholder{
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2.8px;
+    color: #999999;
+  }
+  .input-search:-ms-input-placeholder{
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2.8px;
+    color: #999999;
+  }
+  .input-search::-ms-input-placeholder{
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2.8px;
+    color: #999999;
+  }
+  .input-search::placeholder{
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2.8px;
+    color: #999999;
+  }
+  .search-box:hover{
+    outline: 3px solid $main_color;
+  }
+  .btn-search:hover{
+    border: 1px solid $main_color;
+  }
+}
+
+header{
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 100;
+  width: 100%;
+  background: $main_color;
+}
+
+.conatiner__header{
+  height: 83px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  a{
+    text-decoration: none;
+    font-family: 'Aleo';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  a:hover{
+    background: rgba(251, 244, 244, 0.514);
+    color: $main_color;
+    border-radius: 4px;
+  }
+}
+
+.container__Why_Choose_Us{
+  display: flex;
+  justify-content: space-between;
+  &--text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 211px;
+    max-width: 560px;
+    width: 100%;
+    h3{
+      font-family: 'Aleo';
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 26px;
+      color: #FFFFFF;
+    }
+    p:nth-child(2){
+      font-family: 'Josefin Sans';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 1.6px;
+      color: #E8E8E8;
+      margin-top: 50px;
+    }
+    button{
+      margin-top: 66px;
+    }
+  }
+  &--image{
+    margin-top: 118px;
+    margin-left: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .image:first-child{
+      max-width: 350px;
+    }
+    .image:last-child{
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-end;
+      img{
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+.container__How_It_Works{
+  height: 340px;
+  background: #333333;
+  .iconbox, .iconbox--center{
+    margin-top: 99px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 217px;
+    position: relative;
+    p{
+      margin-top: 19px;
+      font-family: 'Aleo';
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 26px;
+      text-align: center;
+      color: #E8E8E8;
+    }
+    .icon{
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .content{
+    max-width: 1005px;
+    margin: 0 auto;
+    display: flex;
+
+  }
+  .iconbox--center:before{
+    content: "";
+    width: 100%;
+    height: 271px;
+    border-radius: 50% 50% 50% 50%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0);
+    border-right: 1px solid rgba(255, 255, 255, 0);
+    border-bottom: 1px solid transparent;
+    position: absolute;
+    top: -32%;
+    margin-right: 106%;
+  }
+  .iconbox--center:after{
+    content: "";
+    width: 100%;
+    height: 271px;
+    border-radius: 50% 50% 50% 50%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0);
+    border-right: 1px solid rgba(255, 255, 255, 0);
+    border-bottom: 1px solid transparent;
+    position: absolute;
+    top: -32%;
+    margin-right: -106%;
+  }
+  .iconbox--center{
+    width: 100%;
+    position: relative;
+    max-width: 386px;
+    margin: 99px 8%;
+  }
+  .icon:hover{
+    .icon-Combined2::before,
+    .icon-Combined1::before,
+    .icon-Combined3::before{
+      color: #ffffff;
+    }
+  }
+}
+
+.container__Spain, .container__Spain--2{
+  display: flex;
+  .textbox{
+    background: RGBA(35,35,35,0.9);
+    width: 543px;
+    height: 374px;
+    margin-top: 227px;
+    padding-left: 32px;
+    p,h3{
+      font-family: 'Josefin Sans';
+      font-weight: 400;
+      line-height: 26px;
+    }
+    p:nth-child(2){
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-top: 23px;
+    }
+    h3{
+      font-size: 20px;
+      letter-spacing: 1.5px;
+      color: #E8E8E8;
+      padding-top: 49px;
+    }
+    p:nth-child(3){
+      font-size: 16px;
+      color: #E8E8E8;
+      margin-top: 13px;
+    }
+    button{
+      margin-top: 46px;
+    }
+  }
+}
+
+.container__Spain--2{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container__Our_Tourist{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  h3{
+    font-family: 'Aleo';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-top: 128px;
+  }
+  .Sam_Sumon{
+    height: 284px;
+    display: flex;
+    margin-top: 91px;
+    .Sam_Sumon--text{
+      max-width: 668px;
+      width: 100%;
+      background: #333333;
+      padding: 49px 25px 5px 62px;
+      p:first-child{
+        font-family: 'Josefin Sans';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: #FEFEFE;
+      }
+      p:last-child{
+        font-family: 'Josefin Sans';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #E8E8E8;
+        margin-top: 8px;
+      }
+      .icon-quote{
+        position: relative;
+        top: 5px;
+        margin-right: 10px;
+      }
+    }
+    img{
+      display: flex;
+    }
+  }
+}
+
+footer{
+  height: 271px;
+  background: #232323;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .image{
+    margin-top: 122px;
+  }
+  p{
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1.6px;
+    color: #FFFFFF;
+    margin-top: 8px;
+  }
+  .footer__icon{
+    display: flex;
+    gap: 10px;
+    margin-top: 17px;
+  }
+  
+  a:hover::before{
+    color: $main_color;
+    font-size: 20px;
+  }
+  a:hover{
+    background: none;
+    border-radius: none;
+  }
+}
+
+#page__overlay{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: #1a1a1a;
+  opacity: 0.7;
+  display: none;
+  &.open{
+    display: block;
+  }
+}
+
+// ====================button===============================
+.animation{
+  height: 0;
+  width: 112px;
+  border-bottom: 63px solid rgba(48, 193, 29, 0);
+  border-left: 0px solid;
+  border-right: 65px solid transparent;
+  position: absolute;
+  top: 1%;
+  left: 115px;
+}
+
+button{
+  width: 228px;
+  height: 63px;
+  background: #5474FD;
+  border: none;
+  font-family: 'Aleo';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: relative;
+  .button--text{
+    position: relative;
+    z-index: 20;
+  }
+}
+
+button:hover{
+cursor: pointer;
+  .animation{
+    border-bottom: 60px solid #496BFE;
+    transition: all 2.5s ease;
+    transform: translateX(-115px);
+    cursor: pointer;
+  }
+  .button--text{
+    color: rgba(251, 244, 244, 0.903);
+    text-decoration: underline;
+  }
+}
+// ====================button===============================
+
+//=====================background===========================
+.Bhromaon{
+  background: url(../images/1min.jpg);
+}
+
+.Bhromaon,
+.Why_Choose_Us,
+.Spain, 
+.Spain--2,
+.Our_Tourist{
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.container__Bhromaon,
+.conatiner__header,
+.container__Why_Choose_Us,
+.container__Spain,
+.container__Spain--2,
+.container__Our_Tourist{
+  max-width: 1135px;
+  margin: 0 auto;
+}
+//=====================background===========================
+
+//====================menu==================================
+#side_menu{
+  position: fixed;
+  width: 375px;
+  height: 812px;
+  right: 0px;
+  top: 0px;
+  background: $main_color;
+  z-index: 2000;
+  transform: translateX(375px);
+  transition: all .5s ease;
+  &.open{
+    transform: translateX(0);
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 26px;
+    gap: 34px;
+    border-bottom: none;
+    a{
+      font-size: 34px;
+      line-height: 42px;
+    }
+  }
+  .position--hamb{
+    width: 90px;
+    height: 76px;
+  }
+}
+.hamb_menu{
+  display: none;
+}
+//====================menu==================================
+
+@media  screen and (max-width:1134px){
+  .container__Bhromaon,
+  .conatiner__header,
+  .container__Why_Choose_Us,
+  .container__Spain,
+  .container__Spain--2,
+  .container__Our_Tourist{
+    width: 95%;
+  }
+  .Our_Tourist{
+    height: 100%;
+  }
+  .container__Our_Tourist{
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    span{
+      margin-top: 20px;
+    }
+    .Sam_Sumon{
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      height: 100%;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media  screen and (max-width:910px){
+  .iconbox--center:before{
+    content: "";
+    display: none;
+  }
+  .iconbox--center::after{
+    content: "";
+    display: none;
+  }
+  .container__How_It_Works{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .content{
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .iconbox, .iconbox--center{
+      margin: 35px 15px 35px 15px;
+      max-width: 217px;
+    }
+  }
+}
+
+@media  screen and (max-width:710px){
+  .hamb_menu{
+    display: block;
+  }
+  .conatiner__header{
+    .nav{
+      display: none;
+    }
+  }
+  .container__Why_Choose_Us{
+    flex-direction: column;
+    .container__Why_Choose_Us--text{
+      max-width: 100%;
+      margin-top: 100px;
+    }
+    .container__Why_Choose_Us--image{
+      margin: 20px 0;
+    }
+  }
+  .Why_Choose_Us {
+    height: 100%;
+  }
+  .container__Spain, .container__Spain--2{
+    .textbox{
+      width: 100%;
+    }
+  }
+  .container__Bhromaon{
+   .search-box{
+     width: 100%;
+      .input-search{
+        width: 100%;
+      }
+    }
+  }
+  .container__Our_Tourist{
+    .Sam_Sumon{
+      width: 90%;
+    }
+  }
+}
+
+@media  screen and (max-width:430px){
+  .container__Bhromaon{
+    h1{
+      font-size: 40px;
+    }
+  }
+  #side_menu {
+    width: 325px;
+  }
+  .container__Spain, .container__Spain--2{
+    .textbox{
+      height: 450px;
+    }
+  }
+}
