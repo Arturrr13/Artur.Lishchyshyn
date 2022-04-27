@@ -524,6 +524,10 @@ cursor: pointer;
     text-decoration: underline;
   }
 }
+
+button:focus{
+  outline: 5px solid #496BFE;
+}
 // ====================button===============================
 
 //=====================background===========================
