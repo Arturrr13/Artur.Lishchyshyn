@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: js/
+Sitemap: https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+Host: arturrr13.github.io
