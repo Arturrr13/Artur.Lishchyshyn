@@ -28,6 +28,7 @@
 .icon-quote:before {
   content: "\e900";
   color: #5474FD;
+  font-size: 36px;
 }
 .icon-Combined1:before {
   content: "\e901";

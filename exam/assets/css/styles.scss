@@ -1,6 +1,6 @@
 $main_color: #5474FD;
 
-@import 'hamburger';
+@import 'hamburger.min';
 
 *, *::after, *::before{
     margin: 0;
@@ -67,7 +67,9 @@ img{
   .scroll_down:hover{
     .arrow{
       border: solid $main_color;
-      border-width: 0 2px 2px 0;
+      border-width: 0 3px 3px 0;
+      width: 16px;
+      height: 16px;
     }
     p{
       color: $main_color;
@@ -99,20 +101,21 @@ img{
     position: absolute;
     width: 153px;
     height: 63px;
-    
     top: 0px;
     background: #5474FD;
     border: 2px solid #FFFFFF;
-    font-family: 'Aleo';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 26px;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
+    span{
+      font-family: 'Aleo';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
     svg{
       margin-left: 10px;
     }
@@ -209,6 +212,7 @@ ul{
     line-height: 26px;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: all .3s ease;
   }
   a:hover{
     background: rgba(251, 244, 244, 0.514);
@@ -274,8 +278,8 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 217px;
-    position: relative;
+    width: 100%;
+    max-width: 365px;
     p{
       margin-top: 19px;
       font-family: 'Aleo';
@@ -285,62 +289,57 @@ ul{
       text-align: center;
       color: #E8E8E8;
     }
-    .icon{
-      width: 100px;
+    .icon, .icon--center{
+      width: 100%;
+      max-width: 406px;
       height: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
   }
   .content{
-    max-width: 1005px;
+    max-width: 1128px;
     margin: 0 auto;
     display: flex;
+  }
+  .icon--center:before{
+    content: "";
+    width: 100%;
+    height: 350px;
+    border-radius: 50%;
+    border-top: 1px solid rgba(255,255,255,.5);
+    border-left: 1px solid rgba(255,255,255,0);
+    border-right: 1px solid rgba(255,255,255,0);
+    border-bottom: 1px solid transparent;
+    position: absolute;
+    top: -33px;
+    right: 47%;
+  }
+  .icon--center:after{
+    content: "";
+    width: 100%;
+    max-width: 404px;
+    height: 350px;
+    border-radius: 50%;
+    border-top: 1px solid rgba(255,255,255,.5);
+    border-left: 1px solid rgba(255,255,255,0);
+    border-right: 1px solid rgba(255,255,255,0);
+    border-bottom: 1px solid transparent;
+    position: absolute;
+    top: -33%;
+    right: -46%;
+  }
 
-  }
-  .iconbox--center:before{
-    content: "";
-    width: 100%;
-    height: 271px;
-    border-radius: 50% 50% 50% 50%;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0);
-    border-right: 1px solid rgba(255, 255, 255, 0);
-    border-bottom: 1px solid transparent;
-    position: absolute;
-    top: -32%;
-    margin-right: 106%;
-  }
-  .iconbox--center:after{
-    content: "";
-    width: 100%;
-    height: 271px;
-    border-radius: 50% 50% 50% 50%;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0);
-    border-right: 1px solid rgba(255, 255, 255, 0);
-    border-bottom: 1px solid transparent;
-    position: absolute;
-    top: -32%;
-    margin-right: -106%;
-  }
-  .iconbox--center{
-    width: 100%;
-    position: relative;
-    max-width: 386px;
-    margin: 99px 8%;
-  }
-  .icon:hover{
-    .icon-Combined2::before,
-    .icon-Combined1::before,
-    .icon-Combined3::before{
+    .icon-Combined2:hover::before,
+    .icon-Combined1:hover::before,
+    .icon-Combined3:hover::before{
       color: #ffffff;
     }
-  }
 }
 
-.container__Spain, .container__Spain--2{
+.container__Country, .container__Country--2{
   display: flex;
   .textbox{
     background: RGBA(35,35,35,0.9);
@@ -376,7 +375,7 @@ ul{
   }
 }
 
-.container__Spain--2{
+.container__Country--2{
   display: flex;
   justify-content: flex-end;
 }
@@ -398,7 +397,7 @@ ul{
     height: 284px;
     display: flex;
     margin-top: 91px;
-    .Sam_Sumon--text{
+    &--text{
       max-width: 668px;
       width: 100%;
       background: #333333;
@@ -458,6 +457,7 @@ footer{
   a:hover::before{
     color: $main_color;
     font-size: 20px;
+    transition: all .5s ease;
   }
   a:hover{
     background: none;
@@ -481,22 +481,15 @@ footer{
 }
 
 // ====================button===============================
-.animation{
-  height: 0;
-  width: 112px;
-  border-bottom: 63px solid rgba(48, 193, 29, 0);
-  border-left: 0px solid;
-  border-right: 65px solid transparent;
-  position: absolute;
-  top: 1%;
-  left: 115px;
-}
-
 button{
   width: 228px;
   height: 63px;
-  background: #5474FD;
+  background: rgb(73,107,254);
+  background: linear-gradient(53deg,#496bfe 26%,#02ff67 20%,#5474fd 32%);
   border: none;
+  background-position: center top;
+  background-size: 450% 63px;
+  transition: all .8s ease;
   font-family: 'Aleo';
   font-weight: 400;
   font-size: 16px;
@@ -504,29 +497,17 @@ button{
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #FFFFFF;
-  position: relative;
-  .button--text{
-    position: relative;
-    z-index: 20;
-  }
 }
 
 button:hover{
-cursor: pointer;
-  .animation{
-    border-bottom: 60px solid #496BFE;
-    transition: all 2.5s ease;
-    transform: translateX(-115px);
-    cursor: pointer;
-  }
-  .button--text{
-    color: rgba(251, 244, 244, 0.903);
-    text-decoration: underline;
-  }
+  cursor: pointer;
+  background-position: left top;
+  color: #02ff67;
 }
 
 button:focus{
-  outline: 5px solid #496BFE;
+  outline: 3px solid #496BFE;
+  border-radius: 5px;
 }
 // ====================button===============================
 
@@ -537,8 +518,8 @@ button:focus{
 
 .Bhromaon,
 .Why_Choose_Us,
-.Spain, 
-.Spain--2,
+.Country, 
+.Country--2,
 .Our_Tourist{
   background-size: cover;
   width: 100%;
@@ -547,8 +528,8 @@ button:focus{
 .container__Bhromaon,
 .conatiner__header,
 .container__Why_Choose_Us,
-.container__Spain,
-.container__Spain--2,
+.container__Country,
+.container__Country--2,
 .container__Our_Tourist{
   max-width: 1135px;
   margin: 0 auto;
@@ -595,8 +576,8 @@ button:focus{
   .container__Bhromaon,
   .conatiner__header,
   .container__Why_Choose_Us,
-  .container__Spain,
-  .container__Spain--2,
+  .container__Country,
+  .container__Country--2,
   .container__Our_Tourist{
     width: 95%;
   }
@@ -617,31 +598,9 @@ button:focus{
       width: 500px;
       height: 100%;
       margin-bottom: 25px;
-    }
-  }
-}
-
-@media  screen and (max-width:910px){
-  .iconbox--center:before{
-    content: "";
-    display: none;
-  }
-  .iconbox--center::after{
-    content: "";
-    display: none;
-  }
-  .container__How_It_Works{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    .content{
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .iconbox, .iconbox--center{
-      margin: 35px 15px 35px 15px;
-      max-width: 217px;
+      &--text{
+        padding: 49px 25px 25px 25px;
+      }
     }
   }
 }
@@ -668,7 +627,7 @@ button:focus{
   .Why_Choose_Us {
     height: 100%;
   }
-  .container__Spain, .container__Spain--2{
+  .container__Country, .container__Country--2{
     .textbox{
       width: 100%;
     }
@@ -686,6 +645,82 @@ button:focus{
       width: 90%;
     }
   }
+  .container__How_It_Works{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .content{
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .iconbox, .iconbox--center{
+      margin: 35px 15px 35px 15px;
+      max-width: 217px;
+    }
+    .icon--center:before{
+      content: "";
+      display: none;
+    }
+    .icon--center::after{
+      content: "";
+      display: none;
+    }
+  }
+}
+
+@media  screen and (max-width:520px){
+  .container__Bhromaon{  
+    .search-box{
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+      .input-search{
+        height: 50px;
+        width: 50px;
+        padding: 10px 35px 10px 10px;
+        border-radius: 25%;
+        transition: all .5s ease-in-out;
+      }
+      .btn-search{
+        width: 50px;
+        height: 50px;
+        border: 2px solid white;
+        outline: none;
+        cursor: pointer;
+        border-radius: 25%;
+        position: absolute;
+        right: 0px;
+        background-color:$main_color;
+        pointer-events: painted;
+        span{
+          display: none;
+        }
+        svg{
+          margin-left: 0;
+        }  
+      }
+      .btn-search:focus ~ .input-search{
+        width: 300px;
+        padding: 10px 35px 10px 10px;
+        border-radius: 13px;
+        background-color: white;
+        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+      }
+      .input-search:focus{
+        width: 300px;
+        border-radius: 13px;
+        background-color: white;
+        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+      }
+      &:hover{
+        outline: none;
+      }
+      .btn-search:hover{
+        border: 2px solid $main_color;
+      }
+    }
+  }
 }
 
 @media  screen and (max-width:430px){
@@ -697,9 +732,12 @@ button:focus{
   #side_menu {
     width: 325px;
   }
-  .container__Spain, .container__Spain--2{
+  .container__Country, .container__Country--2{
     .textbox{
-      height: 450px;
+      height: 100%;
+      button{
+        margin-bottom: 25px;
+      }
     }
   }
 }

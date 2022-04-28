@@ -55,6 +55,10 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
       @else {
         opacity: $hamburger-hover-opacity;
       }
+      background-position: center top;
+    }
+    &:focus{
+      outline: none;
     }
   
     &.is-active {

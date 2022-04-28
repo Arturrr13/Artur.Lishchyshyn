@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: js/
-Sitemap: https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+Sitemap: https://github.com/Arturrr13/Artur.Lishchyshyn/blob/main/exam/sitemap.xml
 Host: arturrr13.github.io
