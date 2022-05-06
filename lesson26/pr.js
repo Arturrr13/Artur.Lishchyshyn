@@ -25,7 +25,7 @@ function circle(){
 function sped(){
     const s = parseInt(prompt('Введіть відстань'));
     const t = parseInt(prompt('Введіть час'));
-    const v = s/t;
+    let v = s/t;
     alert(`Швидкість: ${v} км/год`);
 }
 
