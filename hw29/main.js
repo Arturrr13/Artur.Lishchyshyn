@@ -1,13 +1,3 @@
-// function task1(){
-//     const num = parseInt(document.getElementById('task_1_number').value);
-//     let rez=12345;
-//     for(let i=1; i<=99; i++) {
-//         rez=rez/10;
-//         console.log(rez);
-//     }
-//     document.getElementById('task_1_result').innerText = rez;
-// }
-
 function task1(){
     const age = parseInt(document.getElementById('task_1_number').value);
     let i =age;
