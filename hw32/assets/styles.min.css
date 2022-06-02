@@ -1,0 +1,1 @@
+.top-penal{position:fixed;left:0;top:0;padding:20px 0;text-align:center;z-index:100;color:#000;width:100vw}.top-penal.penal-error{background-color:red}.top-penal.penal-success{background-color:green}.top-penal.penal-info{background-color:#0ff}

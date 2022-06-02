@@ -201,7 +201,6 @@ const fraction = {
 }
 
 function task3() {
-    
     let ch1 = checkNumber('task_3_number1') !== false ? checkNumber('task_3_number1') : false,
         zn1 = checkNumber('task_3_number2') !== false ? checkNumber('task_3_number2') : false,
         ch2 = checkNumber('task_3_number3') !== false ? checkNumber('task_3_number3') : false,
