@@ -95,6 +95,7 @@ function output(){
     })
     document.getElementById('tbody').innerHTML = html
 }
+output()
 
 const thname = document.getElementById('name')
 const thage = document.getElementById('age')
