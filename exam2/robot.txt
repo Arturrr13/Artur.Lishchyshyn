@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: js/
+Sitemap: https://github.com/Arturrr13/Artur.Lishchyshyn/blob/main/exam2/sitemap.xml
+Host: arturrr13.github.io
