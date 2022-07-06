@@ -27,6 +27,7 @@ body{
     background: rgb(124, 122, 158);
     .box__styles{
         background: rgb(18, 23, 49);
+        color: bisque;
     }
 }
 
@@ -35,8 +36,22 @@ img{
     height: 100%;
     object-fit: cover;
     vertical-align: top;
+    max-height: 300px;
+    &:hover{
+        transform: scale(1.02);
+    }
 }
 
 svg:hover{
     cursor: pointer;
+    transform: scale(1.2);
+}
+
+.bar{
+    display: flex;
+    justify-content: flex-end;
+    width: 200px;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(241,180,46,1) 31%, rgba(241,255,0,1) 60%, rgba(46,221,1,1) 100%);
 }
