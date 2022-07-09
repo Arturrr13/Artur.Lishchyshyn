@@ -116,7 +116,7 @@
                 <a class="page-link" href="#" @click="goToPage(i + number(page))">{{ i + number(page) }}</a>
               </li>
               
-              <template v-if="page < total - 3">
+              <template v-if="page < total - 3 && total != 5">
                 <li class="page-item"><a class="page-link"> ... </a></li>
                 <li class="page-item">
                     <a class="page-link" href="#"  @click="goToPage(total)">{{ total }}</a>
