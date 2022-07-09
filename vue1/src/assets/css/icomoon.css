@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../icomoon/icomoon.eot?tgr9xj');
+  src:  url('../icomoon/icomoon.eot?tgr9xj#iefix') format('embedded-opentype'),
+    url('../icomoon/icomoon.ttf?tgr9xj') format('truetype'),
+    url('../icomoon/icomoon.woff?tgr9xj') format('woff'),
+    url('../icomoon/icomoon.svg?tgr9xj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-reddit:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-telegram:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-facebook:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-instagram:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-linkedin:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-twitter:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-Vector1:before {
+  content: "\e907";
+}
+.icon-Vector2:before {
+  content: "\e908";
+}
+.icon-Vector3:before {
+  content: "\e90a";
+}
+.icon-hour:before {
+  content: "\e979";
+}

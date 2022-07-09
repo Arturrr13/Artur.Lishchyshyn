@@ -1,0 +1,207 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Raleway';
+    background: #000100;
+}
+
+ul {
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2{
+    font-weight: 800;
+    font-size: 82px;
+    line-height: 95%;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+button{
+    height: 47px;
+    border: 1.5px solid #63AF8F;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #63AF8F;
+}
+
+@mixin flex($direc, $juc) {
+    display: flex;
+    flex-direction: $direc;
+    justify-content: $juc;
+}
+
+.home-revolutionizing{
+    @include flex(row, space-between);
+    .text-box{
+        @include flex(column, top);
+        max-width: 706px;
+        margin-top: 100px;
+        h2{
+            font-weight: 400;
+        }
+        span{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 145%;
+            letter-spacing: 0.1em;
+            color: #FFFFFF;
+            margin-top: 40px;
+        }
+        button{
+            margin-top: 15px;
+            width: 266px;
+        }
+        .subtext{
+            font-size: 16px;
+            margin-top: 26px;
+        }
+    }
+    .img{
+        width: 100%;
+        max-width: 710px;
+    }
+    .img-presale{
+        max-height: 425px;
+    }
+}
+
+.home-presale{
+    margin-top: 110px;
+    @include flex(row, flex-end);
+    position: relative;
+    .text-box{
+        @include flex(column, top);
+        max-width: 680px;
+        align-items: flex-end;
+        text-align: end;
+        span{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 145%;
+            letter-spacing: 0.1em;
+            color: #FFFFFF;
+            margin-top: 40px;
+        }
+        button{
+            width: 300px;
+            margin-top: 40px;
+        }
+    }
+    .img{
+        position: absolute;
+        top: 140px;
+        left: 0;
+    }
+}
+
+//=====================================FOOTER================================================//
+
+footer{
+    background: #1C1E1C;
+    margin-top: 110px;
+    padding: 57px 0 38px 0;
+    @include flex(row, space-between);
+    .left-wrapper{
+        max-width: 506px;
+        img{
+            width: 143px;
+            height: 165px;
+            margin-top: 66px;
+        }
+    }
+    .right-wrapper{
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 110%;
+        letter-spacing: 0.015em;  
+        color: #FFFFFF;
+        .footer-nav{
+            @include flex(row, space-between);
+            margin-top: 60px;
+            .nav-wrapper{
+                @include flex(column, top);
+                p{
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #FFFFFF;
+                    margin-bottom: 22px;
+                }
+                span{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #FFFFFF;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .social-wrapper{
+            max-width: 276px;
+            margin-top: 64px;
+            @include flex(row, space-between);
+            .social{
+                @include flex(row, center);
+                align-items: center;
+                font-size: 18px;
+                width: 34px;
+                height: 33px;
+                border-radius: 50%;
+                background: #555457;
+            }
+        }
+        form{
+            display: flex;
+            margin-top: 25px;
+            input[type=email]{
+                width: 440px;
+                height: 68px;
+                border: none;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;       
+                color: rgba(0, 0, 0, 0.81);
+                padding: 30px;
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+            button{
+                background: #555457;
+                width: 200px;
+                height: 68px;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;   
+                color: #FFFFFF;
+                border: none;
+                border-radius: 0;
+            }
+        }
+    }
+}
