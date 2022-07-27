@@ -1,27 +1,18 @@
 [
     {
-        "icon": "../assets/image/sliderIcon/1.svg",
         "title": "No Financial Documentation is required to borrow money",
         "info": "Contrary to the traditional financial institutes like Banks, Fixed deposits, etc., UmaChitFund allows the participants to borrow a loan instantly without any need for documentation"
     },
     {
-        "icon": "../assets/image/sliderIcon/2.svg",
         "title": "Higher Return on Investment (ROI)",
         "info": "Compared to the traditional indigenous sources of income, UmaChitFund is a high-yielding community-based monetary setup, generating passive income for its participants in the form of dividends accumulated from Chit Events."
     },
     {
-        "icon": "../assets/image/sliderIcon/3.svg",
         "title": "Extensive and Protracted Savings",
         "info": "Participants who don’t need money can just sit back and enjoy dividends from every chit round, and receive the entire pot amou"
     },
     {
-        "icon": "../assets/image/sliderIcon/4.svg",
         "title": "Perpetual Profit Cycle",
         "info": "The Pot money (borrowed amount) from the Chit round can also be utilized to participate in another low-range chit Event or for staking (if borrowed in UCF Token) on the platform to amplify the rewards."
-    },
-    {
-        "icon": "../assets/image/sliderIcon/5.svg",
-        "title": "Earning 72% APR on staked collateral",
-        "info": "In addition to dividends, the participants will also receive staking rewards (72% APR) in the form of UCF every month according to the collateral amount left in the ‘Chit Pool’ after deduction of every month’s EMI."
     }
 ]

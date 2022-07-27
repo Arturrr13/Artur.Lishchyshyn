@@ -7,10 +7,12 @@
             <span>
                 UmaChitFund is a blockchain-based Chit Industry built on Defi to innovate & reform the ways of the Decentralized Monetary System.
             </span>
-            <button type="button">Join Presale whitelist</button>
+            <router-link title="Go to presale" rel="nofollow" to="/presale" class="button btn__style" id="click">
+                Join Presale whitelist
+                <i v-for="index in 6" :key="index" :class="`circle--${index}`"></i>
+            </router-link>
         </div> 
         <div class="img">
-            <!-- <img class="lazy" src="data:image/gif;base64,R0lGODlhAwACAIAAAP///wAAACH5BAEAAAEALAAAAAADAAIAAAICjF8AOw==" data-src="./assets/images/jpg/1.jpg" alt=""> -->
             <img src="../assets/image/2.png" alt="">
         </div>  
     </section>

@@ -1,0 +1,279 @@
+@media  screen and (max-width:1450px){
+    section{
+        width: 95%;
+    }
+    section .scroll .navigation{
+        width: 95%;
+    }
+    footer .footer__content__wrapper{
+        width: 95%;
+    }
+    .home-roadmap .position__wrapper .wrapper__circle{
+        width: 890px;
+        height: 890px;
+        top: 150px;
+        svg{
+            width: 740px;
+            height: 740px;
+        }
+    }
+}
+
+@media  screen and (max-width:1370px){
+    .blur__on__responsive{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        background: rgba(0, 0, 0, .77);
+        backdrop-filter: blur(25px);
+    }
+    .section__wrapper{
+        position: relative;
+        z-index: 2;
+    }
+    .img__blur{
+        position: absolute;
+        right: 0;
+    }
+    .img__blur--left{
+        position: absolute;
+        left: 0;
+    }
+    .about-content {
+        .about-us{
+            margin: 90px 0 90px 0;
+        }
+        .what-makes-us{
+            padding-bottom: 90px;
+        }
+    }
+    .home-presale .img{
+        top: 230px;
+    }
+}
+
+@media  screen and (max-width:1320px){
+    footer .footer__content__wrapper{
+        flex-direction: column;
+        align-items: center;
+        .left-wrapper{
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row;
+            position: relative;
+            left: -64px;
+            h1{
+                margin-right: 15px
+            }
+        }
+    }
+}
+
+@media  screen and (max-width:1250px){
+    .home-roadmap .position__wrapper .wrapper__circle{
+        width: 690px;
+        height: 690px;
+        top: 255px;
+        right: 55px;
+        svg{
+            width: 540px;
+            height: 540px;
+        }
+        .circle__content .active{
+            height: 150px;
+            left: 44%;
+        }
+    }
+    .home .home-why{
+        padding-top: 250px;
+    }
+}
+
+@media  screen and (max-width:1100px){
+    .home-roadmap .position__wrapper .wrapper__circle{
+        top: 265px;
+        right: 25px;
+    }
+    .404 h1{
+        flex-direction: column;
+    }
+}
+
+@media  screen and (max-width:900px){
+    .burger__nav{
+        display: block;
+    }
+    .navigation nav{
+        display: none;
+    }
+    .burger__nav nav ul .community .arrow::before{
+        right: 30px;
+        top: 20px;
+    }
+    .burger__nav nav ul a svg{
+        margin-left: 15px;
+    }
+    .home-roadmap .components__wrapper{
+        .circular__list{
+            margin: 55px 0 10px 0;
+            height: 430px;
+        }
+    }
+    .home-roadmap .position__wrapper .wrapper__circle{
+        width: 590px;
+        height: 590px;
+        top: 190px;
+        right: -135px;
+        svg{
+            width: 440px;
+            height: 440px;
+        }
+        .circle__content{
+            span{
+                font-size: 20px;
+            }
+            &::before{
+                width: 100px;
+                height: 100px;
+                top: 26px;
+            }
+        }
+        .circle__content .active{
+            height: 140px;
+            left: 42%;
+        }
+    }
+    .home .home-why{
+        padding-top: 100px;
+    }
+}
+
+@media  screen and (max-width:850px){
+    footer .footer__content__wrapper .left-wrapper{
+        left: 0;
+        h1{
+            font-size: 60px;
+        }
+        img{
+            width: 78px;
+            height: 90px;
+            margin-top: 0;
+        }
+    }
+}
+
+@media  screen and (max-width:780px){
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 55px;
+    }
+    .home-roadmap .position__wrapper .wrapper__circle{
+        top: 205px;
+        right: -140px;
+    }
+    .home-roadmap .components__wrapper{
+        max-width: 200px;
+        .circular__list{
+            height: 430px;
+            li{
+                font-size: 18px;
+                line-height: 130%;
+                padding: 0;
+            }
+        }
+        .buttons__wrapper{
+            .pre, .next{
+                width: 80px;
+                height: 80px;
+                &::before{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .pre::before{
+                left: 30px;
+            }
+            .next::before{
+                right: 30px;
+            }
+        }
+    }
+    .cookies-policy, .privacy-policy, .disclaimer{
+        padding: 50px 0;
+    }
+}
+
+@media  screen and (max-width:690px){
+    footer .footer__content__wrapper{
+        width: 95%;
+        .right-wrapper{
+            form input[type=text]{
+                width: 220px;
+                padding: 10px;
+            }
+            button{
+                width: 115px;
+            }
+        }
+        .left-wrapper{
+            h1{
+                font-size: 35px;
+            }
+        }
+    }
+    .home-secured .wrapper__secured{
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 50px;
+        align-items: center;
+    }
+    .presale .section__wrapper form{
+        input[type=text],
+        input[type=url],
+        input[type=email],
+        input[type=number]{
+            width: 100%;
+        }
+        .input-wrapper{
+            margin: 0;
+        }
+    }
+}
+
+@media  screen and (max-width:580px){
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    .home-roadmap .position__wrapper .wrapper__circle{
+        top: 235px;
+        right: -210px;
+    }
+    .home-partnerships .partnerships__wrapper{
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .home-revolutionizing, .home-presale{
+        padding-top: 50px;
+    }
+}
+
+@media  screen and (max-width:410px){
+    .header .navigation .button{
+        width: 160px;
+    }
+    .about-content .introduction, .about-content .about-us, .about-content .what-makes-us{
+        .text-box{
+            margin: 0;
+            text-align: start;
+        }
+    }
+}

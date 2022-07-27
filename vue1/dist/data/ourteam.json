@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Albert Einstein",
+        "position": "Chill manager",
+        "twitter": "",
+        "linkedin": "",
+        "wiki": "https://en.wikipedia.org/wiki/Albert_Einstein"
+    },
+    {
+        "name": "Jeff Bezos",
+        "position": "Sales manager",
+        "twitter": "https://twitter.com/JeffBezos",
+        "linkedin": "https://www.linkedin.com/showcase/jeff-bezos-newslines?trk=affiliated-pages",
+        "wiki": "https://en.wikipedia.org/wiki/Jeff_Bezos"
+    },
+    {
+        "name": "Gabe Newell",
+        "position": "Big manager",
+        "twitter": "https://twitter.com/valvesoftware",
+        "linkedin": "https://www.linkedin.com/company/valve-corporation",
+        "wiki": "https://en.wikipedia.org/wiki/Gabe_Newell"
+    },
+    {
+        "name": "Elon Musk",
+        "position": "Smoke manager",
+        "twitter": "https://twitter.com/elonmusk",
+        "linkedin": "https://www.linkedin.com/showcase/elon-musk-newslines",
+        "wiki": "https://en.wikipedia.org/wiki/Elon_Musk"
+    },
+    {
+        "name": "Steve Jobs",
+        "position": "Apple growing manager",
+        "twitter": "https://twitter.com/Apple",
+        "linkedin": "https://www.linkedin.com/company/apple",
+        "wiki": "https://en.wikipedia.org/wiki/Steve_Jobs"
+    }
+]

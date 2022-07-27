@@ -11,18 +11,25 @@ html, body{
     background: #000100;
 }
 
+#app{
+    overflow: hidden;
+}
+
 ul {
     list-style: none;
 }
 
 img{
     width: 100%;
-    height: 100%;
     object-fit: cover;
+    pointer-events: none;
 }
 
 a{
     text-decoration: none;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 h1, h2{
@@ -34,17 +41,13 @@ h1, h2{
     color: #FFFFFF;
 }
 
-button{
-    height: 47px;
-    border: 1.5px solid #63AF8F;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #63AF8F;
+h2{
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: -0.035em;
+    text-transform: capitalize;
+    color: #FFFFFF;
 }
 
 @mixin flex($direc, $juc) {
@@ -53,12 +56,177 @@ button{
     justify-content: $juc;
 }
 
+@mixin btnAnim($afBf, $time, $bkg) {
+    background: $bkg;
+    animation: $afBf $time linear infinite;
+    opacity: .75;
+    box-shadow: 0 0 10px $bkg, 0 0 30px $bkg;
+}
+
+@mixin btn() {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4d17a900;
+    position: absolute;
+}
+
+.button{
+    height: 50px;
+    border: 1.5px solid #63AF8F;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #63AF8F;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button[type=submit]{
+    transition: .5s;
+    &:hover{
+        background: #63AF8F;
+        letter-spacing: 5px;
+        cursor: pointer;
+    }
+}
+
+#click{
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content: "";
+        background: #ffffff;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s
+    }
+    &:active::after{
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+    }
+}
+
+@keyframes click {
+    0%{ opacity: 1; left: -100%;}
+    100%{ opacity: .3; left: 0;}
+}
+
+.btn__style{
+    position: relative;
+    transition: .5s;
+    &:hover{
+        cursor: pointer;
+        letter-spacing: .23rem;
+        box-shadow: 0 0 10px #63AF8F;
+        border: 1px solid #63AF8F;
+        color: #f3f3f3;
+        background: linear-gradient(25deg, rgba(99,175,143,.6) 14%, rgba(112,101,169,.6) 34%, rgba(95,55,145,.6) 53%, rgba(0,0,0,.6) 82%);
+    }
+    .circle--1, .circle--2, .circle--3, .circle--4, .circle--5, .circle--6{
+        &::after{
+            @include btn();
+            bottom: -4px;
+            left: -4px;
+        }
+        &::before{
+            @include btn();
+            top: -4px;
+            right: -4px;
+        } 
+    }
+    &:hover .circle--1::after{
+        @include btnAnim(btnAnimationAfter, 4s, #63AF8F)
+    }
+    &:hover .circle--2::after{
+        @include btnAnim(btnAnimationAfter, 5s, #5F3791)
+    }
+    &:hover .circle--3::after{
+        @include btnAnim(btnAnimationAfter, 6s, #7065A9)
+    }
+    &:hover .circle--4::after{
+        @include btnAnim(btnAnimationAfter, 7s, #ffffff)
+    }
+    &:hover .circle--5::after{
+        @include btnAnim(btnAnimationAfter, 8s, #000000)
+    }
+    &:hover .circle--6::after{
+        @include btnAnim(btnAnimationAfter, 9s, #1a0967)
+    }
+    &:hover .circle--1::before{
+        @include btnAnim(btnAnimationBefore, 4s, #63AF8F)
+    }
+    &:hover .circle--2::before{
+        @include btnAnim(btnAnimationBefore, 5s, #5F3791)
+    }
+    &:hover .circle--3::before{
+        @include btnAnim(btnAnimationBefore, 6s, #7065A9)
+    }
+    &:hover .circle--4::before{
+        @include btnAnim(btnAnimationBefore, 7s, #ffffff)
+    }
+    &:hover .circle--5::before{
+        @include btnAnim(btnAnimationBefore, 8s, #000000)
+    }
+    &:hover .circle--6::before{
+        @include btnAnim(btnAnimationBefore, 9s, #1a0967)
+    }
+}
+
+@keyframes btnAnimationBefore {
+    0% {}
+    43% {right: 292px; top: -4px}
+    50% {top: 42px; right: 292px;}
+    93% {right: -4px; top: 42px;}
+    100% {top: -4px; right: -4px;}
+}
+
+@keyframes btnAnimationAfter {
+    0% {}
+    43% {left: 292px; bottom: -4px}
+    50% {bottom: 42px; left: 292px;}
+    93% {left: -4px; bottom: 42px;}
+    100% {bottom: -4px; left: -4px;}
+}
+
+.carousel__next, .carousel__prev, .buttons__wrapper .next, .buttons__wrapper .pre{
+    transition: .5s;
+    &:hover{
+        background: #63AF8F;
+        cursor: pointer;
+        box-shadow: 0 0 15px #5F3791;
+        &::before{
+            border-top: solid #000000;
+            border-left: solid #000000;
+        }
+    }
+}
+
+section, footer .footer__content__wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .home-revolutionizing{
     @include flex(row, space-between);
+    padding-top: 100px;
     .text-box{
         @include flex(column, top);
         max-width: 706px;
-        margin-top: 100px;
         h2{
             font-weight: 400;
         }
@@ -70,9 +238,8 @@ button{
             color: #FFFFFF;
             margin-top: 40px;
         }
-        button{
+        a{
             margin-top: 15px;
-            width: 266px;
         }
         .subtext{
             font-size: 16px;
@@ -89,7 +256,7 @@ button{
 }
 
 .home-presale{
-    margin-top: 110px;
+    padding-top: 100px;
     @include flex(row, flex-end);
     position: relative;
     .text-box{
@@ -97,6 +264,8 @@ button{
         max-width: 680px;
         align-items: flex-end;
         text-align: end;
+        position: relative;
+        z-index: 5;
         span{
             font-weight: 400;
             font-size: 18px;
@@ -105,8 +274,7 @@ button{
             color: #FFFFFF;
             margin-top: 40px;
         }
-        button{
-            width: 300px;
+        a{
             margin-top: 40px;
         }
     }
@@ -121,9 +289,9 @@ button{
 
 footer{
     background: #1C1E1C;
-    margin-top: 110px;
     padding: 57px 0 38px 0;
-    @include flex(row, space-between);
+    position: relative;
+    z-index: 1;
     .left-wrapper{
         max-width: 506px;
         img{
@@ -132,12 +300,31 @@ footer{
             margin-top: 66px;
         }
     }
+    .footer__content__wrapper{
+        @include flex(row, space-between);
+    }
+    .copyright{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        border-top: 2px solid #63AF8F;
+        margin: 39px 2.5% 0 2.5%;
+        padding-top: 29px;
+    }
     .right-wrapper{
         font-weight: 600;
         font-size: 36px;
         line-height: 110%;
         letter-spacing: 0.015em;  
         color: #FFFFFF;
+        .message{
+            color: red;
+            margin-top: 5px;
+            font-size: 20px;
+            letter-spacing: 4px;
+        }
         .footer-nav{
             @include flex(row, space-between);
             margin-top: 60px;
@@ -145,38 +332,66 @@ footer{
                 @include flex(column, top);
                 p{
                     font-weight: 700;
-                    font-size: 16px;
+                    font-size: 18px;
                     line-height: 20px;
                     color: #FFFFFF;
                     margin-bottom: 22px;
                 }
-                span{
+                span, a{
                     font-weight: 400;
-                    font-size: 14px;
-                    line-height: 16px;
+                    font-size: 16px;
+                    line-height: 18px;
                     color: #FFFFFF;
                     margin-top: 10px;
+                    transition: .5s;
+                    &:hover{
+                        transform: scale(1.2);
+                        cursor: pointer;
+                        font-weight: 600;
+                        &:nth-child(odd){
+                            color: #5F3791;
+                        }
+                        &:nth-child(even){
+                            color: #63AF8F;
+                        }
+                    }
                 }
             }
         }
         .social-wrapper{
-            max-width: 276px;
+            max-width: 350px;
             margin-top: 64px;
             @include flex(row, space-between);
             .social{
                 @include flex(row, center);
                 align-items: center;
                 font-size: 18px;
-                width: 34px;
-                height: 33px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
                 background: #555457;
+                transition: all .5s ease;
+                a{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &:hover{
+                    background: #5F3791;
+                    box-shadow: 0 0 10px #5F3791;
+                    transform: scale(1.2);
+                    a::before{
+                        color: #63AF8F;
+                    }
+                }
             }
         }
         form{
             display: flex;
             margin-top: 25px;
-            input[type=email]{
+            input[type=text]{
                 width: 440px;
                 height: 68px;
                 border: none;
@@ -203,5 +418,40 @@ footer{
                 border-radius: 0;
             }
         }
+    }
+}
+
+.cookies-policy, .privacy-policy, .disclaimer{
+    margin: 0 auto;
+    max-width: 1100px;
+    text-align: justify;
+    padding: 100px 0;
+    h1{
+        font-size: 32px;
+        color: #63AF8F;
+        padding: 20px 0;
+    }
+    h2{
+        font-size: 30px;
+        font-style: italic;
+        color: #5F3791;
+    }
+    h3{
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 110%;
+        color: #FFFFFF;
+        padding: 15px 0;
+    }
+    p, li, a {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+    }
+
+    a{
+        font-style: italic;
+        color: #5F3791;
     }
 }

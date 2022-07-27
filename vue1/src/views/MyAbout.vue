@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <div class="blur__on__responsive"></div>
     <about-content />
   </div>
 </template>
